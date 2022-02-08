@@ -28,4 +28,15 @@ describe('CardFactory', () => {
   it('should know all highness', () => {
     expect(CardFactory.highness.length).toBe(8);
   });
+
+  xit('should shuffle the deck', () => {
+    CardFactory.shuffle(deck); // to be tested
+    const reference = CardFactory.getDeck();
+
+    reference.forEach((orderedCard, i) => {
+      const shuffledCard = deck[i];
+      console.log(shuffledCard.color, shuffledCard.highness);
+    });
+  });
+
 });

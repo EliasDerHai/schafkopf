@@ -16,7 +16,7 @@ export enum Highness {
   ass = 'Ass'
 }
 
-export class CardFactory {
+export abstract class CardFactory {
   static readonly colors: CardColor[] = [CardColor.eichel, CardColor.gras, CardColor.herz, CardColor.schelln];
   static readonly highness = [Highness.seven, Highness.eight, Highness.nine, Highness.ten, Highness.unter, Highness.ober, Highness.koenig, Highness.ass];
 
@@ -35,6 +35,23 @@ export class CardFactory {
       });
     });
 
+    return deck;
+  }
+
+  static shuffle(deck: Card[]) {
+    let currentIndex = deck.length, randomIndex;
+
+    // While there remain elements to shuffle...
+    while (currentIndex != 0) {
+
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+
+      // And swap it with the current element.
+      [deck[currentIndex], deck[randomIndex]] = [
+        deck[randomIndex], deck[currentIndex]];
+    }
     return deck;
   }
 
