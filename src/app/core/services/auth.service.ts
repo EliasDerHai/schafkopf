@@ -18,6 +18,7 @@ export class AuthService {
     private router: Router,
   ) {
     this.user$ = this.afAuth.authState;
+    this.user$.subscribe(x => console.log(x));
   }
 
   async googleSignIn() {

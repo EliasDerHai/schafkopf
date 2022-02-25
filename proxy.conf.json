@@ -1,0 +1,10 @@
+{
+    "/google": {
+      "target": "https://lh3.googleusercontent.com/",
+      "secure": true,
+      "pathRewrite": {
+      "^/google": ""
+    },
+      "changeOrigin": true
+    }
+  }

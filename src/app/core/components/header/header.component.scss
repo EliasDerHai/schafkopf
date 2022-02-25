@@ -1,0 +1,44 @@
+:host {
+    .container {
+        height: 120px;
+        width: 100%;
+        background-color: var(--background-color);
+
+        .img-container {
+            position: absolute;
+            top: 10px;
+            left: -25px;
+            height: 150px;
+            width: 260px;
+            background-color: var(--background-color);
+            border-radius: 30px;
+
+            img {
+                margin-left: 35px;
+                height: 140px;
+                background-color: var(--background-color);
+                border-radius: 30px;
+                transition: transform 0.8s;
+                transform-style: preserve-3d;
+                cursor: pointer;
+
+                &:hover {
+                    transform: rotateY(180deg);
+                }
+            }
+        }
+
+        .bar {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-top: 40px;
+            padding-right: 10px;
+            grid-gap: 2em;
+            
+            span {
+                color: white;
+            }
+        }
+    }
+}
