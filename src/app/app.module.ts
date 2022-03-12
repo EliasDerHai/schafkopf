@@ -12,12 +12,15 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { environment } from '../environments/environment';
 import { RoomComponent } from './room/room.component';
 import { CoreModule } from './core/core.module';
+import { PickRoomComponent } from './pick-room/pick-room.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RoomComponent,
+    PickRoomComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,6 +28,7 @@ import { CoreModule } from './core/core.module';
     BrowserAnimationsModule,
 
     CoreModule,
+    SharedModule,
 
     // Firebase
     AngularFireModule.initializeApp(environment.firebaseConfig),

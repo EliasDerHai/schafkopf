@@ -1,11 +1,5 @@
-<h1>Base</h1>
-
-<ng-container *ngIf="auth.user$ | async as user; else login">
-  {{user | json}}
-  <hr>
-  <button (click)="auth.googleSignOut()">Logout</button>
-</ng-container>
-
-<ng-template #login>
-  <button (click)="auth.googleSignIn()">Login</button>
-</ng-template>
+<div class="vertical-center">
+  <div class="horizontal-center">
+      <app-button (click)="auth.googleSignIn()" icon="login" label="Login"></app-button>
+  </div>
+</div>

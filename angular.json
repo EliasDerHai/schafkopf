@@ -79,6 +79,10 @@
               "browserTarget": "scharfkopf:build:development"
             }
           },
+          "options": {
+            "browserTarget": "scharfkopf:build",
+            "proxyConfig": "src/proxy.conf.json"
+          },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {

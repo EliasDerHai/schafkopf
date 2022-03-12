@@ -1,13 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-
 :root {
-    --accent-color: #30C5FF;
-    --primary-color: #5C946E;
-    --secondary-color: #80C2AF;
-    --tertiary-color: #A0DDE6;
-    --background-color: #2A2D34;
-  }
+  --accent-color: #30c5ff;
+  --primary-color: #5c946e;
+  --secondary-color: #80c2af;
+  --tertiary-color: #423852;
+  --background-color: #2a2d34;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: var(--tertiary-color);
+  color: white;
+}
+
+.vertical-center {
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.horizontal-center {
+  margin: auto;
+}
